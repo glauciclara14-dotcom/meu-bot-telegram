@@ -442,5 +442,5 @@ def main():
     print("O bot está pronto para receber webhooks.")
 
 if __name__ == "__main__":
-    # Remove o polling e roda o servidor Flask
-    main()
+    PORT = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=PORT)
